@@ -1,0 +1,14 @@
+cambridge_dictionary.ahk
+
+highlight text
+press Ctrl + q to search keywork with the Cambridge Dictionary
+-------------------------------------------------------------
+google_translate.ahk
+
+highlight text
+Press Ctrl + w to translate from English to Vietnamese using Google Translate.
+------------------------------------------------------------------------
+search_keyword.ahk
+
+highlight text
+Press Ctrl + e to find images corresponding to a keyword
