@@ -2,7 +2,7 @@
 #SingleInstance force ; Avoids multiple instances of the script running at the same time.
 
 url := "https://translate.google.com/?sl=en&tl=vi&text="
-^w::
+^e::
 Clipboard := ClipboardAll 
 send, ^c
 sleep, 500

@@ -3,7 +3,7 @@
 
 first := "https://www.google.com/search?q="
 end := "&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjY9MikqpuAAxUL3WEKHZiSCiEQ_AUoAXoECAIQAw&biw=1347&bih=685&dpr=1.38"
-^e::
+^g::
 Clipboard := ClipboardAll 
 send, ^c
 sleep, 500
