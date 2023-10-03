@@ -15,6 +15,7 @@ Gui, Add, Checkbox, vCamBr, Cambridge Dictionary
 Gui, Add, Checkbox, vGgoogleTr, Google Translate
 Gui, Add, Checkbox, vSearch, Search text
 Gui, Add, Checkbox, vImage, Search image
+Gui, Add, Checkbox, vVocabCom, Search VocabCom
 return
 
 
@@ -34,12 +35,14 @@ LaunchGoogle:
 	GuiControlGet, checked,, GgoogleTr
 	GuiControlGet, checked,, Search
 	GuiControlGet, checked,, Image
+	GuiControlGet, checked,, VocabCom
 
 
 	Hotkey, ^q, myCambridge, on
 	Hotkey, ^e, GoogleTranslate, on
 	Hotkey, ^r, SearchText, on
 	Hotkey, ^g, SearchImage, on
+	Hotkey, ^t, SearchVocabCom, on
 	return
 
 	myCambridge:
@@ -58,6 +61,9 @@ LaunchGoogle:
 	SearchImage(Image)
 	return
 	
+	SearchVocabCom:
+	SearchVocabCom(VocabCom)
+	return
 
 
 ;Function
@@ -127,4 +133,19 @@ SearchImage(checked){
 	}
 }
 
+SearchVocabCom(checked){
+	if(checked = 1){
+		url := "https://www.vocabulary.com/dictionary/"
+	Clipboard := ClipboardAll 
+	send, ^c
+	sleep, 100
+	link := url Clipboard
+	sleep,500
+	Run,%link%
+	return
+}else{
+		Hotkey, ^t, off
+		
+	}
 
+}
